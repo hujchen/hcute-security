@@ -1,0 +1,5 @@
+# Project exclude paths
+/hcute-security-app/target/
+/hcute-security-browser/target/
+/hcute-security-core/target/
+/hcute-security-demo/target/
