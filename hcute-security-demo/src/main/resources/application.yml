@@ -8,3 +8,17 @@ spring:
     password: root123
   session:
     store-type: redis
+# 配置时间返回为时间戳 springboot 1.0版本是默认的，但是springboot 2.0 版本是需要配置的
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+
+# 配置时间戳返回的格式
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+
+
+#hcute:
+#  security:
+#    browser:
+#      loginPage: /demo-signIn.html

@@ -9,8 +9,6 @@
         <module>hcute-security-app</module>
         <module>hcute-security-demo</module>
     </modules>
-
-
     <groupId>hoo.hcute.security</groupId>
     <artifactId>hcute-security</artifactId>
     <version>1.0.0-SNAPSHOT</version>
