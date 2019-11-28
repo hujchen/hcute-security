@@ -51,8 +51,8 @@ public class WebConfig implements WebMvcConfigurer {
         return registrationBean;
     }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
 //        registry.addInterceptor(timeInterceptor);
-    }
+//    }
 }

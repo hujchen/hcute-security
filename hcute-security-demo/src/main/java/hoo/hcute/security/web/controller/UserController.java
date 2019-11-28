@@ -11,8 +11,11 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -22,6 +25,23 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
+//    @GetMapping("/me")
+//    public Object getCurrentUser(){
+//        return SecurityContextHolder.getContext().getAuthentication();
+//    }
+
+//    @GetMapping("/me")
+//    public Object getCurrentUser(Authentication authentication){
+//        return authentication;
+//    }
+
+    @GetMapping("/me")
+    public Object getCurrentUser(@AuthenticationPrincipal UserDetails userDetails){
+        return userDetails;
+    }
+
+
 
     @PostMapping
     public User create(@Valid  @RequestBody User user) {

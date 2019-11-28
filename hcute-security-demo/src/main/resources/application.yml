@@ -7,7 +7,7 @@ spring:
     username: root
     password: root123
   session:
-    store-type: redis
+    store-type: none
 # 配置时间返回为时间戳 springboot 1.0版本是默认的，但是springboot 2.0 版本是需要配置的
   jackson:
     serialization:
@@ -17,8 +17,23 @@ spring:
 #  jackson:
 #    date-format: yyyy-MM-dd HH:mm:ss
 
-
+# 登录页面可配置
 #hcute:
 #  security:
 #    browser:
 #      loginPage: /demo-signIn.html
+
+# 登录成功或失败的提示方式可配置
+#hcute:
+#  security:
+#    browser:
+#      loginType: REDIRECT
+
+# 图形验证码可配置
+#hcute:
+#  security:
+#    code:
+#      image:
+#        length: 6
+#        width: 100
+#        url: /user,/user/*

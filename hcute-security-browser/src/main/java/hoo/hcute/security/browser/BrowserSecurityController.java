@@ -1,5 +1,6 @@
 package hoo.hcute.security.browser;
 
+import hoo.hcute.security.core.properties.SecurityConstants;
 import hoo.hcute.security.core.properties.SecurityProperties;
 import hoo.hcute.security.browser.support.SimpleResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -37,7 +38,7 @@ public class BrowserSecurityController {
      * @param response
      * @return
      */
-    @RequestMapping("/authentication/require")
+    @RequestMapping(SecurityConstants.DEFAULT_UNAUTHENTICATION_URL)
     @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
     public SimpleResponse requireAuthentication(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // 拿到获取跳转的请求
